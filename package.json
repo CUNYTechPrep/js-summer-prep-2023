@@ -1,0 +1,23 @@
+{
+  "name": "js-summer-prep-2023",
+  "version": "1.0.0",
+  "description": "After each session class notes and exercises will be posted to this repo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CUNYTechPrep/js-summer-prep-2023.git"
+  },
+  "author": "Edgardo Molina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CUNYTechPrep/js-summer-prep-2023/issues"
+  },
+  "homepage": "https://github.com/CUNYTechPrep/js-summer-prep-2023#readme",
+  "dependencies": {
+    "jest": "^29.6.2",
+    "prettier": "^3.0.0"
+  }
+}

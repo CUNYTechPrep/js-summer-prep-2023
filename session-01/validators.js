@@ -7,6 +7,20 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
+  const allowedChars = username.match(/^[a-zA-Z0-9]+$/);
+
+  if (username.length >= 3 && username.length <= 10) { 
+    if (!isNaN(username[0])) {
+      return false;
+    } 
+    if (!allowedChars) {
+      return false;
+    }
+    return true; 
+  } 
+  else if (username.length < 3 || username.length > 10) {
+    return false;
+  }
   return;
 }
 
@@ -17,6 +31,16 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
+  const allowedLetter = password.match(/[a-zA-Z]/);
+  const allowedNum = password.match(/\d/);
+  const allowedSPChar = password.match(/[!@#$%^&*]/);
+
+  if (password.length >= 10 && password.length <= 64) { 
+    if (!(allowedLetter && allowedNum && allowedSPChar)) {
+      return false;
+    }
+    return true;
+  }
   return;
 }
 

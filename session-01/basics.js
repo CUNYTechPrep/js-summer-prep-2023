@@ -154,3 +154,4 @@ while (j < schoolName.length) {
   console.log(schoolName[j]);
   j++;
 }
+

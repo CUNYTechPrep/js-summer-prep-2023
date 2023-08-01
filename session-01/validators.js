@@ -6,8 +6,11 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validUsername(username) {
-  if(username.length > 10 || username.length < 3)
+function validUsername(username){
+
+  const regLetters = /[a-z][A-Z]/; // Regular expressions for matching the user name
+  
+  if(username.length > 10 || username.length < 3 && username[0] != regLetters) //This works
     return false;
   else
     return true;
@@ -20,7 +23,7 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  if(password.length > 64 || password.length < 10)
+  if(password.length > 64 || password.length < 10) //this works
     return false;
   else
     return true;

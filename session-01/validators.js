@@ -6,8 +6,13 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
+  const usernameRegex = /^[a-zA-Z][a-zA-Z0-9]{2,9}$/;
+
 function validUsername(username) {
-  return;
+  if(username.match(usernameRegex)){
+    return true;
+  }
+  return false;
 }
 
 /*
@@ -16,8 +21,14 @@ function validUsername(username) {
   - password must be between (and including) 10-64 characters in length
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
+const passwordRegex = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])[a-zA-Z0-9\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?]{10,64}$/;
+
 function validPassword(password) {
-  return;
+  if(password.match(passwordRegex))
+  {
+    return true;
+  }
+  return false;
 }
 
 module.exports = { validUsername, validPassword };

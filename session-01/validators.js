@@ -7,7 +7,16 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  return;
+  unameLength = (username.length >= 3 && username.length <= 10);
+  firstChar = (username[0] >= 'a' && username[0].toLowerCase <= 'z') || (username[0] >= 'A' && username[0] <= 'Z');
+
+  if (!unameLength || !firstChar) return false;
+  for (let i = 1; i < username.length; i++) {
+    ch = username[i];
+    containsSpecialChar = (ch < '0') || (ch > '9' && ch < 'A') || (ch > 'Z' && ch < 'a');
+    if (containsSpecialChar) return false;
+  }
+  return true;
 }
 
 /*
@@ -17,7 +26,23 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
+  length = (password.length >= 10 && password.length <= 64);
+  if (!length) return false;
+
+  let letterCount = 0, numCount = 0, specialChCount = 0;
+
+  console.log("length is valid: ");
+  for (let i = 0; i < password.length; i++) {
+    ch = password[i];
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) ++letterCount;
+    if (ch >= 0 && ch <= 9) ++numCount;
+
+    containsSpecialChar = (ch < '0') || (ch > '9' && ch < 'A') || (ch > 'Z' && ch < 'a');
+    if (containsSpecialChar) ++specialChCount;
+  }
+
+
+  return (letterCount > 0 && numCount > 0 && specialChCount > 0) ? true : false;
 }
 
 module.exports = { validUsername, validPassword };

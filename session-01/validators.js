@@ -10,14 +10,15 @@ function validUsername(username) {
 
   //checking character length
   if(username.length < 3 || username.length > 10) return false;
+  if (username.length < 3 || username.length > 10) return false;
 
   // begin with a letter
-  if(!/^([A-Za-z])/.search(username.charAt(0))) return false;
+  if(!username[0].test("[A-Za-z]")) return false;
 
   //contain numbers and letters, no special characters
   if(!/^[a-zA-Z0-9]+$/.search(username)) return false;
 
-  //if the username follows all the guidelines then it will return true
+ //if the username follows all the guidelines then it will return true
   return true;
 }
 

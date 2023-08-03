@@ -7,17 +7,36 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  return;
-}
+    let valid = true;
+    let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    if(username.length<3 && username.length>10)
+    {
+        console.log("username must be between 3-10 characters in length");
+        valid = false;
+    }
+    if(username.includes(specialChars))
+    {
+        console.log("username cannot contain special characters");
+        valid = false;
+    }
+    if(username.includes(/[0-9]/), 0)
+    {
+        valid = false;
+    }
 
-/*
-  Write a function that returns true or false if the given password
-  is valid according to the following rules:
-  - password must be between (and including) 10-64 characters in length
-  - password must contain at least 1 letter, 1 number, and 1 special character
-*/
-function validPassword(password) {
-  return;
-}
+    return valid;
+  }
+  
+  /*
+    Write a function that returns true or false if the given password
+    is valid according to the following rules:
+    - password must be between (and including) 10-64 characters in length
+    - password must contain at least 1 letter, 1 number, and 1 special character
+  */
+  function validPassword(password) {
+    let regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,64}$/;
 
-module.exports = { validUsername, validPassword };
+    return regex.test(password);
+  }
+  
+  module.exports = { validUsername, validPassword };

@@ -9,7 +9,6 @@
 function validUsername(username) {
 
   //checking character length
-  if(username.length < 3 || username.length > 10) return false;
   if (username.length < 3 || username.length > 10) return false;
 
   // begin with a letter

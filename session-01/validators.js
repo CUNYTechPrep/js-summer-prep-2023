@@ -39,12 +39,6 @@ function validUsername(username) {
 */
 function validPassword(password) {
 
-/*
-////////////////////////////////////////////////////////////////////////////////////////////////////
-      For some reason this nested if is returning undefined, I'm unable to find the solution
-///////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-
   // password length is between 10 and 64 characters
   if(password.length >= 10 && password.length <= 64){
 

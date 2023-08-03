@@ -7,19 +7,19 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  // if(username.length >= 3 && username.length <= 10){
-  //   if((/[a-zA-Z]/).test(username.charAt(0))){
-  //     for(let i = 0; i < username.length; i++){
-  //       if((/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/)
-  //       .test(unsername.charAt(i))){
-  //         return false;
-  //       }
-  //     }
-  //     return true;
-  //   }
-  // }
-  // return false;
+  if(username.length >= 3 && username.length <= 10){
+    if((/[a-zA-Z]/).test(username.charAt(0))){
+      for(let i = 0; i < username.length; i++){
+        if((/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/)
+        .test(username.charAt(i))){
+          return false;
+        }
+      }
+      return true;
+    }
+  }
   return false;
+  //return false;
 }
 
 /*
@@ -29,21 +29,26 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  // let letter = false;
-  // let number = false;
-  // let special = false;
-  // if(password.length >= 10 && password.length <= 64){
+  let letter = false;
+  let number = false;
+  let special = false;
+  if(password.length >= 10 && password.length <= 64){
 
-  //   for(let i = 0; i < password.length; i++){
+    for(let i = 0; i < password.length; i++){
 
-  //     if((/[a-zA-Z]/).test(password.charAt(i))){ letter = true};
-  //     if((/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/)
-  //       .test(password.charAt(i))){ special = true};
-  //     if(!(isNaN(password.charAt(i)))){ number = true};
-  //   }
-  // }
-  // return letter && number && special;
-  return false;
+      if((/[a-zA-Z]/).test(password.charAt(i))){ letter = true};
+      if((/[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/)
+        .test(password.charAt(i))){ special = true};
+      if(!(isNaN(password.charAt(i)))){ number = true};
+    }
+  }
+  return letter && number && special;
+  //return false;
 }
+
+//test case1
+//console.log("return true:" + validUsername("superman"));
+
+//
 
 module.exports = { validUsername, validPassword };

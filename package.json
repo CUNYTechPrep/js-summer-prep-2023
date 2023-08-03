@@ -18,6 +18,7 @@
   "homepage": "https://github.com/CUNYTechPrep/js-summer-prep-2023#readme",
   "dependencies": {
     "jest": "^29.6.2",
+    "mocha": "^10.2.0",
     "prettier": "^3.0.0"
   }
 }

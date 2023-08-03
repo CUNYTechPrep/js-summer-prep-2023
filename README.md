@@ -6,7 +6,7 @@ To try the code and exercises you should
 
 - [Fork](https://github.com/CUNYTechPrep/js-summer-prep-2023/fork) this repo
 - Clone your forked repo
-  - `git clone [paste link to your repo here]`
+  - `git clone https://github.com/popki222/js-summer-prep-2023`
 
 > _The steps above only need to be done once_
 

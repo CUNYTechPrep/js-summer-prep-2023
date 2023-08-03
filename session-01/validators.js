@@ -8,23 +8,20 @@
 */
 
 function validUsername(username) {
-  let len = username.length();
-  if(len<3 || len>10){
+  let len = username.length;
+  if (len < 3 || len > 10) {
     return false;
   }
-  
 
+  if (!/^[a-zA-Z]/.test(username)) {
+    return false;
+  }
 
-    if (!/^[a-zA-Z]/.test(username)) {
-      return false;
-    }
+  if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    return false;
+  }
 
-    if (!/^[a-zA-Z0-9]+$/.test(username)) {
-      return false;
-    }
-  
-    return true;
-
+  return true;
 }
 
 /*
@@ -34,7 +31,6 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
- 
   let len = password.length;
   if (len < 10 || len > 64) {
     return false;
@@ -45,7 +41,6 @@ function validPassword(password) {
   }
 
   return true;
-
 }
 
 module.exports = { validUsername, validPassword };

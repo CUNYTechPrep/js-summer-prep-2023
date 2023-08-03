@@ -8,12 +8,12 @@
 
 **Is the solution complete?**
 
-[Yes]
+Yes
 
 **Did you run into any problems?**
 
-[Describe...]
+I had some trouble figuring out how to check if a string met certain conditions.
 
 **Did you collaborate with others on this solution?**
 
-<!-- Provide github usernames -->
+No.

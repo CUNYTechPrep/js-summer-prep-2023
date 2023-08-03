@@ -53,7 +53,7 @@ function validPassword(password) {
   //My Regex Quantifier
   let letterCheck = /[a-zA-Z]+/;
   let numberCheck = /[0-9]+/;
-  let specialCheck = /[\. \+ \* \? \^ \$ \( \) \[ \] \{ \} \| \\]+/;
+  let specialCheck = /[\. \+ \* \? \^ \$ \( \) \[ \] \{ \} \| \\ \@ \! \# \% \& \* ]+/;
   
   //Length Check
   if (!(password.length >= 10 && password.length <= 64)){

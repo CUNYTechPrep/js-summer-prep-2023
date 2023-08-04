@@ -8,7 +8,8 @@
 */
 function validUsername(username) {
   let isCorrectLength = username.length >= 3 && username.length <= 10;
-  let beginsWithLetter = username.charAt(0);
+  let firstLetter = username[0];
+  let beginsWithLetter = (firstLetter >= 'a' && firstLetter <= 'z') || (firstLetter >= 'A' && firstLetter <= 'Z');
   let hasSpecials = hasSpecialChars(username);
   return isCorrectLength && beginsWithLetter && !hasSpecials;
 }
@@ -27,7 +28,7 @@ function validPassword(password) {
   let isCorrectLength = password.length >= 10 && password.length <= 64;
   let containsNums = /[0-9]/.test(password);
   let containsLetter = /[a-zA-Z]/.test(password);
-  return isCorrectLength && containsLetter && containsNums;
+  return isCorrectLength && containsLetter && containsNums && hasSpecialChars(password);
 }
 
 module.exports = { validUsername, validPassword };

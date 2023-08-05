@@ -3,7 +3,15 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  let newListOfStrings = [];
+
+  for(let i = 0; i < listOfStrings.length; i++) {
+    newListOfStrings[i] = listOfStrings[i].toUpperCase();
+  }
+
+  listOfStrings = newListOfStrings;
+
+  return listOfStrings;
 }
 
 /*
@@ -16,7 +24,40 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+
+  let sum = 0;
+
+  for(const student of listOfStudentObjects) {
+    //console.log(student);
+
+    const studentEntries = Object.entries(student);
+
+    //console.log(studentEntries);
+
+    const studentMap = new Map(studentEntries);
+
+    /*
+    console.log("|Start|");
+    console.log(studentMap);
+    console.log("Age: " + studentMap.get("age"));
+    console.log("|End|");
+    */
+
+    //console.log(studentMap);
+
+    if(listOfStudentObjects.length === 0) {
+      return 0;
+    }
+
+    if(studentMap.get("age") === undefined && listOfStudentObjects.length > 0) {
+      sum += 0;
+    } else {
+      sum += studentMap.get("age");
+    }
+
+  }
+
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

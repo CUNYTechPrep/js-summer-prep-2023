@@ -10,8 +10,8 @@
 function validUsername(username) {
   if(username === null) return false;
 
-  if(username.length >= 3 && username.length <= 10 && // between 3-10characters in length
-     username.match(/\W/) === null && //cannot contain special characters, may contain numbers and letters
+  if(username.length >= 3 && username.length <= 10 && // between 3-10characters in length 
+     /\W/.test(username) === false && //cannot contain special characters, may contain numbers and letters
      username.charAt(0).match(/\D/) !== null)  //must begin with a letter
       return true;
 

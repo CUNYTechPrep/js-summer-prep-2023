@@ -9,7 +9,6 @@ function transformArrayToUpper(listOfStrings) {
   }
   return uppercaseStrings;
   // return listOfStrings.map((word) => word.toUpperCase());
-  
 }
 
 /*

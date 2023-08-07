@@ -1,3 +1,4 @@
+
 // looping through arrays
 
 const fruits = ["apple", "banana", "coconut", "durian"];

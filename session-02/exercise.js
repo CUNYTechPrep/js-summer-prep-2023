@@ -3,8 +3,12 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  for (let i = 0; i < listOfStrings.length; i++){
+    listOfStrings[i] = listOfStrings[i].toUpperCase();
+  }
+  return listOfStrings;
 }
+
 
 /*
   Write a function that returns the sum of all student ages.
@@ -16,7 +20,13 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
-}
+  let totalAge = 0;
+  for (let i = 0; i < listOfStudentObjects.length; i++) {
+    if (listOfStudentObjects[i].age) {
+      totalAge += listOfStudentObjects[i].age;
+    }
+  }
+  return totalAge;
 
+}
 module.exports = { transformArrayToUpper, sumOfAllAges };

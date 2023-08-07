@@ -19,6 +19,10 @@ function validUsername(username) {
   else if (username === /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/ ){
       username =  false;
 
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 3a2aabb5c84a8dbfd843886a6aadb9b703a22221
   return;
 }
 

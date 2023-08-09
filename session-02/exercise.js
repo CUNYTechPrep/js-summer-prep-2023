@@ -3,7 +3,21 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  let uppercaseArray = []; // Creating an array to store the uppercase strings
+
+  // Loop through each string in the input array
+  for (let i = 0; i < listOfStrings.length; i++) {
+    let originalString = listOfStrings[i]; // Getting the current string from the array
+
+    // Converting the string to uppercase using the .toUpperCase() method
+    let uppercaseString = originalString.toUpperCase();
+
+    // Adding the uppercase string to the new array
+    uppercaseArray.push(uppercaseString);
+  }
+
+  // Returning the array of uppercase strings
+  return uppercaseArray;
 }
 
 /*
@@ -16,7 +30,18 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sum = 0; // Initializing the sum of ages
+
+  // Looping through each student object in the array
+  for (let i = 0; i < listOfStudentObjects.length; i++) {
+    // Checking if the current student object has an 'age' property
+    if (listOfStudentObjects[i].age !== undefined) {
+      sum += listOfStudentObjects[i].age; // Add the age to the sum
+    }
+  }
+
+  // Returning the calculated sum of ages
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

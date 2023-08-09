@@ -118,7 +118,7 @@ console.log(result);
 /***** Conditionals *****/
 // equality:
 // 🚫 avoid loose equality (==) [applies coercion]
-// ✅ use strict equality (===)
+// ✅ use strict equality (===) 
 console.log(34 == 34);
 console.log(34 == "34");
 

@@ -7,8 +7,11 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  return;
+  //using regex:
+  const regex = /^[a-zA-Z][a-zA-Z0-9]{2,9}$/;
+  return regex.test(username);
 }
+
 
 /*
   Write a function that returns true or false if the given password
@@ -17,7 +20,8 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  return;
+  const regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{10,64}$/;
+  return regex.test(password);
 }
 
 module.exports = { validUsername, validPassword };

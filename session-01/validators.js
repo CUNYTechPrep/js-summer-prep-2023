@@ -6,7 +6,7 @@
   - username may contain numbers and letters
   - username cannot contain special characters
 */
-function validUsername(username) {
+function validUsername(username) { 
   let number_array = ["0","1","2","3","4","5","6","7","8","9"]; //these are the only 10 numbers (as strings) that could occur as a first character
   let symbol_array = ["!","@","#","$","%","^","&","*","(",")",".",",","?"]; //'special characters' may not be defined the same way in each system, array can be changed to changed definition in function
 

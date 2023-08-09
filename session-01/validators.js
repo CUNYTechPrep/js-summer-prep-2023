@@ -7,13 +7,9 @@
   - username cannot contain special characters
 */
 function validUsername(username) {
-  if (username.length < 3 || username.length > 10) {
-    return false;
-  } else if (!/^[a-zA-Z]/.test(username.charAt(0))) {
-    return false;
-  } else if (!/^[a-zA-Z0-9]+$/.test(username)) {
-    return false;
-  }
+  if (username.length < 3 || username.length > 10) return false;
+  if (!/^[a-zA-Z]/.test(username.charAt(0))) return false;
+  if (!/^[a-zA-Z0-9]+$/.test(username)) return false;
   return true;
 }
 /*
@@ -23,15 +19,9 @@ function validUsername(username) {
   - password must contain at least 1 letter, 1 number, and 1 special character
 */
 function validPassword(password) {
-  if (password.length < 10 || password.length > 64) {
-    return false;
-  } else if (!/[a-zA-Z]/.test(password)) {
-    return false;
-  } else if (!/[0-9]/.test(password)) {
-    return false;
-  } else if (!/[^a-zA-Z0-9]/.test(password)) {
-    return false;
-  }
+  if (password.length < 10 || password.length > 64) return false;
+  if (!/[a-zA-Z]/.test(password)) return false;
+  if (!/[0-9]/.test(password) || !/[^a-zA-Z0-9]/.test(password)) return false; 
   return true;
 }
 

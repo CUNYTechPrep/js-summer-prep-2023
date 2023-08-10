@@ -3,7 +3,9 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+
+  // use map to return .toUpperCase() of the strings
+  return listOfStrings.map(str => str.toUpperCase());
 }
 
 /*
@@ -16,7 +18,40 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+
+    // initialize sum to 0 and add values later
+    let sum = 0;
+
+    // use a loop to iterate object
+    for (const student of listOfStudentObjects) {
+
+      // check for age
+      if (student.age !== undefined) {
+
+        // if age exist, add the age to the sum
+        sum += student.age;
+      }
+    }
+  
+    // return the final sum
+    return sum;
+
+ /*
+  ///////////////// Alternate solution using special functions ///////////////////
+
+  const validAges = listOfStudentObjects
+
+  // use filter() function to exclude objects without age data
+  .filter(student => student.age !== undefined)
+
+  // use map to get age from the objects in a new array
+  .map(student => student.age);
+  
+  // initialize sum to 0, use reduce() function to get calculate
+  return validAges.reduce((sum, age) => sum + age, 0);
+
+  ///////////////////////////////////////////////////////////////////////////////
+  */
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

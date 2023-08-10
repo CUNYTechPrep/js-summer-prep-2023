@@ -23,7 +23,7 @@ function sumOfAllAges(listOfStudentObjects) {
   for(let i = 0; i < listOfStrings.length; i++){
     sum+= listOfStrings[i].age;
   }
-  return;
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

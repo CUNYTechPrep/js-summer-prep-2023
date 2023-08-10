@@ -12,7 +12,7 @@ Yes
 
 **Did you run into any problems?**
 
-I had some trouble figuring out how to check if a string met certain conditions.
+No.
 
 **Did you collaborate with others on this solution?**
 

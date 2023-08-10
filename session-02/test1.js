@@ -19,3 +19,21 @@ function transformArrayToUpper(listOfStrings) {
     }
     return;
   }
+let fire;
+console.log(fire);
+
+const student243 = {
+    firstName: "Edwin",
+    lastName: "Cruz",
+    age: 29,
+    gpa: 4.0,
+    fullName: function () {
+      return this.firstName + " " + this.lastName;
+    },
+    bday() {
+      console.log("Happy Birthday!");
+      this.age++;
+    },
+  };
+student243.major;
+  console.log(student243.major);

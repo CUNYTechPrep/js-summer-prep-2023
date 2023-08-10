@@ -3,7 +3,23 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  const listOfItems = [];
+  if(listOfStrings.length === 0){
+    return listOfStrings;
+  }
+  for(const item of listOfStrings){
+    listOfItems.push(item.toUpperCase());
+    console.log(listOfItems);
+  }
+
+  return listOfItems;
+  
+  // for(let i = 0;i<listOfStrings.length;i++)
+  // {
+  //   listOfItems.push(listOfStrings[i].toUpperCase());
+  //   console.log(listOfItems[i]);
+  // }
+  // return listOfItems;
 }
 
 /*
@@ -15,8 +31,20 @@ function transformArrayToUpper(listOfStrings) {
     [{ name: 'Sandra', age: 31 }, {}, { name: 'Didi', age: 20}]
     the function should return 51
 */
-function sumOfAllAges(listOfStudentObjects) {
-  return;
+function sumOfAllAges(listOfStudentObjects) 
+{
+  let ageTotal = 0;
+  listOfStudentObjects.forEach(student => {
+    if(student.hasOwnProperty('age'))
+    {
+      ageTotal += student.age;
+      console.log("Age: ", student.age);
+    }
+    
+  });
+  
+  
+  return ageTotal;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

@@ -65,3 +65,19 @@ console.log(fruits);
 // pop / shift
 console.log(fruits.pop(), fruits.shift());
 console.log(fruits.length);
+
+
+function sumOfAllAges(listOfStudentObjects) {
+  let totalSum = 0; //initalize totalSum variable
+  for(let i = 0; i <= listOfStudentObjects.length; i++){
+    if(listOfStudentObjects.hasOwnProperty('age')){ //if the object has the property 'age', then the condition is true.
+      let studentsAge = listOfStudentObjects.age;
+      totalSum += studentsAge;
+    }
+    else{
+      return totalSum;
+    }
+}
+}
+
+console.log("The sum of all ages is:  ", sumOfAllAges([{ name: "Sandra", age: 31 }, {}, { name: "Didi", age: 20 }]));

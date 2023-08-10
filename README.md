@@ -26,3 +26,15 @@ After each session you can:
   - `git commit -m '[your commit message here]'`
   - `git push`
 - To submit your work after the session, open a pull request from your repo back to the CUNYTechPrep/js-summer-prep-2023 repo [here](https://github.com/CUNYTechPrep/js-summer-prep-2023/compare)
+
+## Homeworks
+
+### Session 01
+
+- complete [validator functions](session-01/validators.js)
+- Due: August 3, 2023 by 6pm.
+
+### Session 02
+
+- complete [exercise functions](session-02/exercise.js)
+- Due: August 10, 2023 by 6pm.

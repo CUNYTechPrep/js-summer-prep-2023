@@ -21,7 +21,7 @@ function transformArrayToUpper(listOfStrings) {
 function sumOfAllAges(listOfStudentObjects) {
   let sum = 0;
   for(let i = 0; i < listOfStudentObjects.length; i++){
-    sum+= listOfStudenObjects[i].age;
+    sum+= listOfStudentObjects[i].age;
   }
   return sum;
 }

@@ -6,7 +6,7 @@ function transformArrayToUpper(listOfStrings) {
   for(let i = 0; i < listOfStrings.length; i++){
     listOfStrings[i] = listOfStrings[i].toUpperCase();
   }
-  return;
+  return listOfStrings;
 }
 
 /*

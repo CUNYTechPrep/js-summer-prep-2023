@@ -3,7 +3,13 @@
   For example, for the input ["cat", "hat"], return ["CAT", "HAT"]
 */
 function transformArrayToUpper(listOfStrings) {
-  return;
+  const newlistOfStrings = [];
+
+  for(const str of listOfStrings){
+    const upperCaseStr = str.toUpperCase();
+    newlistOfStrings.push(upperCaseStr);
+  }
+  return newlistOfStrings;
 }
 
 /*
@@ -16,7 +22,13 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  return;
+  let sum = 0; 
+
+  for(const student of listOfStudentObjects){
+    if(student.age !== undefined)
+    sum += student.age
+  }
+  return sum;
 }
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

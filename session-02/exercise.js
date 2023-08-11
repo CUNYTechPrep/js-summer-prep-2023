@@ -11,6 +11,7 @@ function transformArrayToUpper(listOfStrings) {
   // return listOfStrings.map((word) => word.toUpperCase());
 }
 
+
 /*
   Write a function that returns the sum of all student ages.
   The function will be passed an array of objects and the result
@@ -22,12 +23,17 @@ function transformArrayToUpper(listOfStrings) {
 */
 function sumOfAllAges(listOfStudentObjects) {
   let sum = 0;
-  for (let i = 0; i < listOfStudentObjects.length; i++){
-    if (listOfStudentObjects[i].age) {
-      sum += listOfStudentObjects[i].age;
-    }
+  // for (let i = 0; i < listOfStudentObjects.length; i++){
+  //   if (listOfStudentObjects[i].age) {
+  //     sum += listOfStudentObjects[i].age;
+  //   }
+  // }
+  
+  for (let studentObject of listOfStudentObjects) {
+    sum += studentObject.age ? studentObject.age : 0
   }
   return sum;
 }
+
 
 module.exports = { transformArrayToUpper, sumOfAllAges };

@@ -18,10 +18,9 @@ function transformArrayToUpper(listOfStrings) {
     the function should return 51
 */
 function sumOfAllAges(listOfStudentObjects) {
-  const studentsWithAgeArray = listOfStudentObjects.filter((student) => "age" in student);
   let ageSum = 0;
-  for(const student of studentsWithAgeArray){
-    ageSum += student.age;
+  for(const student of listOfStudentObjects){
+    ageSum += (student.age || 0);
   }
   return ageSum;
 }

@@ -10,7 +10,6 @@ function transformArrayToUpper(listOfStrings) {
     }
 
     return result;
-  return;
 }
 
 /*
